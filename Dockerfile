@@ -9,8 +9,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	make \
 	git \
 	python \
-	go-1.10 \
+	wget \
 	&& rm -rf /var/lib/apt/lists/* && apt-get clean
+
+# Install golang
+ENV GOPATH=/usr/local/lib/go
+ENV GOROOT=/usr/local/go
+ENV PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+RUN wget https://dl.google.com/go/go1.11.linux-amd64.tar.gz -O golang.tar.gz && tar -zxvf golang.tar.gz && mv go ${GOROOT}
 
 # Install the Google Cloud SDK.
 ENV HOME /
