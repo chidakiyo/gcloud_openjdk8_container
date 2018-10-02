@@ -17,7 +17,7 @@ ENV GOPATH=/usr/local/lib/go
 ENV GOROOT=/usr/local/go
 ENV PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
-RUN wget https://dl.google.com/go/go1.11.linux-amd64.tar.gz -O golang.tar.gz && tar -zxvf golang.tar.gz && mv go ${GOROOT}
+RUN wget https://dl.l.google.com/go/go1.11.linux-amd64.tar.gz -O golang.tar.gz && tar -zxvf golang.tar.gz && mv go ${GOROOT}
 
 # Install the Google Cloud SDK.
 ENV HOME /
