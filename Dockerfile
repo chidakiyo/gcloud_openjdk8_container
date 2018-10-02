@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	make \
 	git \
 	python \
-	go-1.11 \
+	go-1.10 \
 	&& rm -rf /var/lib/apt/lists/* && apt-get clean
 
 # Install the Google Cloud SDK.
