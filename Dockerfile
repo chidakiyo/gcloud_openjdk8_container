@@ -1,4 +1,4 @@
-FROM gcr.io/google_appengine/openjdk8
+FROM gcr.io/google_appengine/openjdk:8
 
 # Install modules
 RUN apt-get update && apt-get install -y --no-install-recommends \
